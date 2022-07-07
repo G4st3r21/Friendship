@@ -6,6 +6,8 @@ from django.db import models
 class CollectedFriendshipsIRT(models.Model):
     guild_name = models.CharField(max_length=15)
     friendships_count = models.IntegerField()
+    color = models.CharField(max_length=10)
+    cardholder_name = models.CharField(max_length=40)
 
     def __str__(self):
         return f'{self.guild_name} = {self.friendships_count} дружбиков'
