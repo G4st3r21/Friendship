@@ -26,24 +26,38 @@
 </head>
 <body>
 
-<div class="container-sm">
-    <h1>КОЛИЧЕСТВО ИНКАССИРОВАННЫХ ДРУЖБИКОВ КАЖДОГО ЦЕХА</h1>
-    <table class="table">
-        <thead>
-        <tr>
-            <th scope="col">Цеха</th>
-            <th scope="col">Дружбики</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for guild_name, count in friendships.items %}
-            <tr>
-                <th scope="row">{{ guild_name }}</th>
-                <td>{{ count }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+<div class="text-center container-sm">
+    <h1>ПАО "Дружба"</h1>
+    <h2>банк дружбиков третьего потока</h2>
+
+    <div class="card" style="width: 18rem; margin: 0 auto">
+        <div class="card-body">
+            <h5 class="card-title">Название карточки</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Подзаголовок карты</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+        </div>
+    </div>
+
+
+{#    <table class="table">#}
+{#        <thead>#}
+{#        <tr>#}
+{#            <th scope="col">Цеха</th>#}
+{#            <th scope="col">Дружбики</th>#}
+{#        </tr>#}
+{#        </thead>#}
+{#        <tbody>#}
+{#        {% for guild_name, count in friendships.items %}#}
+{#            <tr>#}
+{#                <th scope="row">{{ guild_name }}</th>#}
+{#                <td>{{ count }}</td>#}
+{#            </tr>#}
+{#        {% endfor %}#}
+{#        </tbody>#}
+{#    </table>#}
 </div>
 </body>
 </html>
