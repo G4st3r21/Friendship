@@ -1,1 +1,0 @@
-web: gunicorn friendship-g4st3r.wsgi
