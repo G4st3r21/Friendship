@@ -32,11 +32,11 @@
 <body style="background: linear-gradient(to bottom, #ffffff 0%, #000000 100%);">
 
 <div class="container col-12" style="margin-top: 10px">
-    <h1 style="text-align: center; font-family: 'Prata', serif;"><b>Компания супер-агентов "Дружба"</b></h1>
-    <h2 style="text-align: center; font-family: 'Prata', serif;">Банк артефактов четвертого потока</h2>
+    <h1 style="text-align: center; font-family: 'Prata', serif;"><b>[ОЖИДАНИЕ 5-ОГО ПОТОКА]</b></h1>
+    <h2 style="text-align: center; font-family: 'Prata', serif;">Банк [СКРЫТО] пятого потока</h2>
     <div class="col-12">
         {% for guild_name, guild_info in friendships.items %}
-            <h2 style="text-align: center; font-family: 'Prata', serif;">Карта курса "{{ guild_name }}"</h2>
+            <h2 style="text-align: center; font-family: 'Prata', serif;">Карта отряда "{{ guild_name }}"</h2>
             <div class="card bg-dark text-white"
                  style="width: 100%; min-height: 200px ; margin: 15px auto;">
                 <img src=" {{ guild_info.0 }}" class="card-img" alt="..."
@@ -49,7 +49,8 @@
                         актуальна на: {{ today }}</h6>
                     <h3 class="card-text"
                         style="margin-top: 60px; font-family: 'Exo 2', sans-serif;text-shadow: 1.5px 1.5px 1.5px #000;">
-                        <b>Артефактов: {{ guild_info.1 }}</b></h3>
+{#                        <b>Артефактов: {{ guild_info.1 }}</b></h3>#}
+                        <b>[ОЖИДАНИЕ 5-ОГО ПОТОКА]</b></h3>
                     <h5 class="card-text"
                         style="font-family: 'Source Code Pro', monospace;text-shadow: 1.5px 1.5px 1.5px #000;">{{ guild_info.2 }}</h5>
                 </div>
@@ -66,13 +67,13 @@
         <hr>
         <h3>{{ game.1 }}({{ game.0 }})</h3>
         {% for team in game.2 %}
-            <h5>{{ team.0 }} курс. Заработано артефактов: {{ team.1 }}</h5>
+            <h5>{{ team.0 }} отряд. Заработано [СКРЫТО]: {{ team.1 }}</h5>
         {% endfor %}
     {% endfor %}
     <hr>
 </div>
 
-<h3 style="text-align: center; margin-top: 50px; color: white">Стань частью компании супер-агентов!</h3>
+<h3 style="text-align: center; margin-top: 50px; color: white">Вам тоже интересно, на каких отрядах будут ваши вожатые?</h3>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"

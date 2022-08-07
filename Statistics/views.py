@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from openpyxl import load_workbook
-from datetime import date as dt
+from datetime import datetime as dt
+from datetime import time
 from Friendship.settings import BASE_DIR
 
 
@@ -8,7 +9,7 @@ from Friendship.settings import BASE_DIR
 
 def response_stats(request):
     wb = load_workbook(str(BASE_DIR) + '/Экономика.xlsx', data_only=True)
-    ws = wb.worksheets[2]
+    ws = wb.worksheets[3]
     config_ws = wb.worksheets[-1]
 
     names = [(ws.cell(row, 2).value, row) for row in range(3, 7)]
@@ -32,8 +33,6 @@ def response_stats(request):
         ) for pos, name in enumerate(names)
     )
 
-    actual_date = ws.cell(2, money[0][-1]).value
-
     games = [
         [
             ws.cell(row, 1).value, ws.cell(row, 2).value,
@@ -43,6 +42,10 @@ def response_stats(request):
         ]
         for row in range(13, 30) if ws.cell(row, 1).value is not None and ws.cell(row, 3).value != '-'
     ]
+
+    actual_date = ws.cell(2, money[0][-1]).value
+    # time_to_wait = dt.strftime(dt(2022, 8, 8) - dt.now(), '%h')
+    # print(time_to_wait)
 
     context = {
         "friendships": friendship,
