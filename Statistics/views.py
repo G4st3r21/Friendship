@@ -10,6 +10,7 @@ from Friendship.settings import BASE_DIR
 def response_stats(request):
     wb = load_workbook(str(BASE_DIR) + '/Экономика.xlsx', data_only=True)
     ws = wb.worksheets[3]
+
     config_ws = wb.worksheets[-1]
 
     names = [(ws.cell(row, 2).value, row) for row in range(3, 7)]
